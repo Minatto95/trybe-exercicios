@@ -3,4 +3,4 @@ Exercícios da TRYBE
 
 MEU REPOSITÓRIO DE EXERCÍCIOS!
 
-## Para exercutas, digite:
+## Para executar, digite:
