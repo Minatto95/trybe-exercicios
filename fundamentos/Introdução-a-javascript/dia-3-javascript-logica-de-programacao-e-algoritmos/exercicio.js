@@ -13,4 +13,9 @@ for(let contador = 0; contador < fruits.length; contador += 1){
 }
 
 
-console.log(soma)
+if(soma >= 15){
+    console.log(soma)
+
+}else if (soma <= 15){
+    console.log("valor menor que 16.")
+}
