@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      
+    const creatH1 = document.createElement("h1");
+
+    creatH1.innerHTML = "Exercício - JavaScript DOM";
+
+    document.body.appendChild(creatH1);
+    
+    /////
+    
+    const createMain = document.createElement("main");
+
+    createMain.className = "main-content";
+
+    document.body.appendChild(createMain);
+
+    /////
+
+    const createSection = document.createElement("section");
+
+    createSection.className = "center-content";
+
+    createMain.appendChild(createSection);
+
+    /////
+
+    const createP = document.createElement("p");
+
+    createP.innerHTML = "Testando para ver se funcionou."
+
+    createSection.appendChild(createP);
+
+    /////
+
+    const createSectionLeft = document.createElement("section");
+
+    createSectionLeft.ClassName = "left-content";
+
+    createMain.appendChild(createSectionLeft);
+
+    /////
+
+    const createSectionRight = document.createElement("section");
+
+    createSectionRight.className = "right-content";
+
+    createMain.appendChild(createSectionRight);
+
+    /////
+
+    const createImg = document.createElement("img");
+
+    createImg.ClassName = "small-image"
+
+    createImg.src = "https://picsum.photos/200"
+
+    createSectionLeft.appendChild(createImg)
+
+    /////
+
+    const createUl = document.createElement("ul")
+
+    createSectionRight.appendChild(createUl)
+
+    const arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        'Sete', 'Oito', 'Nove', 'Dez']
+
+    for(let number in arrayNumbers){
+        let createLi = document.createElement("li");
+        createLi.innerHTML = arrayNumbers[number];
+        createUl.appendChild(createLi);
+    }
+
+    /////
+
+    // Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+    
+ 
+    
+
+    for(let index = 1; index <= 3; index += 1){
+        const createH3 = document.createElement("h3");
+        createMain.appendChild(createH3);
+        createH3.innerHTML = "SHOW";
+        createH3.className = "description";
+    }
+    
+    creatH1.className = "title";
+    createMain.removeChild(createSectionLeft)
+
+    const modificaRightContent = document.getElementsByClassName("right-content")[0]
+    modificaRightContent.style.marginRight = "auto";
+    
+    // Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+
+    const modificaSectionCenter = document.getElementsByClassName("center-content")[0];
+
+    modificaSectionCenter.parentNode.style.backgroundColor= "green"
+
+    const ul = document.getElementsByTagName('ul')[0];
+      ul.lastChild.remove();
+      ul.lastChild.remove();
+
+    
+
+
+
+    </script>
+  </body>
+</html>
