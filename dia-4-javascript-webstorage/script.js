@@ -17,12 +17,6 @@ window.onload = function(){
  
   })
 
-  let selectTexto = document.getElementById("texto");
-
-
-
-
-
 
   let savedBackground = localStorage.getItem('backgroundColor')
   document.body.style.backgroundColor = savedBackground;
