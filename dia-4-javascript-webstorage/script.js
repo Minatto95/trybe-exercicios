@@ -18,6 +18,7 @@ window.onload = function(){
   })
 
 
+
   let savedBackground = localStorage.getItem('backgroundColor')
   document.body.style.backgroundColor = savedBackground;
 
