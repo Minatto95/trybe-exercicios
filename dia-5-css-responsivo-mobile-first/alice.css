@@ -1,0 +1,48 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  @media screen and (max-width:460px) {
+    body {
+        font-family: sans-serif;
+      background-color: chocolate;
+    }
+    
+      p {
+        padding: 0 5px;
+        line-height: 25px;
+      }
+    
+  }
+
+  @media screen and (min-width:768px) {
+    
+    body {
+        background-color: darkkhaki;
+    }
+     ul:nth-child(1) {
+        display: flex;
+        border: black solid 1px;
+        justify-content: space-around;
+    }
+
+    .box1 {
+        display: flex;
+        border: black solid 1px;
+        justify-content: space-between;
+    }
+  
+
+}
+
+  @media screen and (min-width:1360px) {
+    body {
+        background-color: coral;
+      }
+    
+  }
+
