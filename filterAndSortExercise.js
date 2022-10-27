@@ -61,23 +61,11 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
-  
-    //>>>>>>// Resolução da qual cheguei://>>>>>//
-//   function nameAndAge() {
-//     const age = books.map((book) => `Age: ${book.releaseYear - book.author.birthYear} Author: ${book.author.name}`)
-//     return age.sort()
-
-// }
-// console.log(nameAndAge());
-
-//>>>>>>// Resolução da qual foi requisitada://>>>>>//
-function nameAndAge(){
-    return books.map((book) => ({
-        Age:book.releaseYear - book.author.birthYear,
-        Author:book.author.name,
-    })).sort((a, b) => a.Age - b.Age)
+  function oldBooksOrdered() {
+   const fantasiaAndFiccao = books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
+    
+   return fantasiaAndFiccao.map((author) => author.author.name).sort()
     
 }
 
-console.log(nameAndAge());
+  console.log(oldBooksOrdered());
